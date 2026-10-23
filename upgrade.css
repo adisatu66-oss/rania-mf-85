@@ -1,0 +1,152 @@
+
+/* =========================================================
+   UPGRADE V2 — Responsive system, accessibility, polish
+   CSS native; tanpa framework tambahan.
+========================================================= */
+:root {
+  --ui-primary: #087f5b;
+  --ui-primary-dark: #064c3b;
+  --ui-accent: #ffc928;
+  --ui-ink: #183b32;
+  --ui-muted: #64766d;
+  --ui-paper: #fffdf7;
+  --ui-border: rgba(20, 70, 52, .13);
+  --ui-shadow: 0 16px 40px rgba(27, 58, 42, .09);
+  --ui-radius: 20px;
+}
+html { scroll-padding-top: 100px; -webkit-text-size-adjust: 100%; }
+body { min-width: 320px; }
+img, video, iframe, svg { max-width: 100%; }
+img { height: auto; }
+button, input, select, textarea { max-width: 100%; }
+a, button { touch-action: manipulation; }
+:where(a, button, input, select, textarea):focus-visible {
+  outline: 3px solid #1d4ed8 !important;
+  outline-offset: 3px;
+}
+::selection { color: #fff; background: var(--ui-primary); }
+.header-utama {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding-inline: clamp(16px, 4vw, 5.5%);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+.menu-navigasi { flex-wrap: wrap; }
+.menu-navigasi a { min-height: 40px; display: inline-flex; align-items: center; }
+.tombol-menu { cursor: pointer; border-radius: 12px; }
+.tombol-menu:hover { background: rgba(8,127,91,.08); }
+:where(.hero, .profil-hero, .kg-hero-inner, .kontak-hero, .fas-hero-inner) > * { min-width: 0; }
+:where(.hero, .tentang, .program, .testimoni, .berita, .cta, .footer,
+       .profil-page, .kegiatan-page, .kontak-page, .fasilitas-page) {
+  overflow-wrap: anywhere;
+}
+:where(.hero, .tentang, .program, .testimoni, .berita, .cta,
+       .profil-hero, .kg-hero, .kontak-hero) {
+  scroll-margin-top: 100px;
+}
+:where(.kartu, .kartu-fasilitas, .berita-kartu, .program-kartu,
+       .kontak-link, .fas-kartu, .kg-kartu) {
+  transition: box-shadow .22s ease, transform .22s ease;
+}
+@media (hover:hover) {
+  :where(.kartu, .kartu-fasilitas, .berita-kartu, .program-kartu,
+         .fas-kartu, .kg-kartu):hover {
+    box-shadow: var(--ui-shadow);
+  }
+}
+@media (max-width: 1100px) {
+  .header-utama { gap: 14px; }
+  .nama-sekolah { font-size: clamp(15px, 1.7vw, 19px); }
+  .menu-navigasi { gap: clamp(8px, 1.3vw, 18px); font-size: 10px; }
+  .tombol-ppdb { padding: 9px 13px; gap: 8px; }
+}
+@media (max-width: 760px) {
+  .pita-atas { padding: 7px 16px; flex-wrap: wrap; justify-content: center; text-align: center; }
+  .pita-pesan { line-height: 1.5; }
+  .sosial-mini { display: none; }
+  .header-utama {
+    min-height: 70px;
+    padding: 9px 16px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .identitas { gap: 8px; min-width: 0; }
+  .logo-sekolah { width: 42px; height: 46px; flex: 0 0 auto; }
+  .nama-sekolah { font-size: 16px; line-height: 1.05; }
+  .slogan-logo { font-size: 9px; }
+  .tombol-menu { display: block; margin-left: auto; flex: 0 0 auto; }
+  .tombol-ppdb { order: 3; width: 100%; justify-content: center; min-height: 42px; }
+  .menu-navigasi {
+    display: none;
+    order: 4;
+    width: 100%;
+    padding: 10px;
+    margin: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 3px;
+    border: 1px solid var(--ui-border);
+    border-radius: 16px;
+    background: rgba(255,253,247,.98);
+    box-shadow: 0 12px 28px rgba(20,50,35,.10);
+  }
+  .menu-navigasi.buka,
+  .menu-navigasi.menu-terbuka { display: flex; }
+  .menu-navigasi a {
+    width: 100%;
+    min-height: 44px;
+    padding: 10px 12px;
+    border-radius: 10px;
+    white-space: normal;
+  }
+  .menu-navigasi a:hover,
+  .menu-navigasi a.aktif { background: rgba(8,127,91,.08); }
+  .menu-navigasi a::after { display: none; }
+  .nav-dropdown { width: 100%; }
+  .nav-dropdown > * { max-width: 100%; }
+  .hero {
+    grid-template-columns: minmax(0,1fr);
+    padding: 34px 20px 42px;
+    gap: 28px;
+    min-height: 0;
+  }
+  .hero h1 { font-size: clamp(2.1rem, 9vw, 3.5rem); }
+  .hero-foto { min-width: 0; width: 100%; }
+  .hero-foto img { width: 100%; object-fit: cover; }
+  .profil-hero { grid-template-columns: minmax(0,1fr); padding: 35px 20px 45px; gap: 25px; }
+  .kg-hero-inner, .kontak-hero { grid-template-columns: minmax(0,1fr); gap: 28px; }
+  .kg-hero { padding-top: 38px; }
+  .kontak-hero { margin-bottom: 48px; }
+  .kontak-phone-stage { min-height: 320px; }
+  .kg-container { width: min(100% - 32px, 1180px); }
+  .kontak-page { padding: 38px 16px 52px; }
+  .footer { padding-inline: 20px; }
+  .footer-bawah { flex-wrap: wrap; gap: 8px; }
+  .tombol-atas { right: 16px; bottom: 16px; }
+}
+@media (max-width: 480px) {
+  body { font-size: 14px; }
+  .nama-sekolah { font-size: 14px; }
+  .slogan-logo { font-size: 8px; }
+  .hero { padding-inline: 16px; }
+  .hero h1 { letter-spacing: -.035em; }
+  .hero-tombol, .profil-tombol { max-width: 100%; }
+  :where(.hero-tombol, .profil-tombol, .tombol-ppdb) { min-height: 44px; }
+  .kontak-link { gap: 10px; padding: 12px; }
+  .kontak-icon { flex-basis: 42px; height: 42px; }
+  .kg-container { width: calc(100% - 28px); }
+  .kg-hero h1 { font-size: clamp(2.2rem, 10vw, 3.4rem); }
+  .kg-hero-tags span { font-size: .75rem; }
+  .footer-bawah { font-size: 11px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+}
