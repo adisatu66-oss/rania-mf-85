@@ -1,0 +1,1514 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#fff5df">
+  <meta name="description" content="Jelajahi fasilitas SMPIT Nur Hidayah yang mendukung kegiatan belajar, ibadah, kreativitas, dan pengembangan potensi siswa.">
+
+  <title>Fasilitas Sekolah | SMPIT Nur Hidayah</title>
+
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Kalam:wght@400;700&family=Nunito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- CSS utama website -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- CSS khusus halaman fasilitas -->
+  <style>
+    /* =========================================
+       HALAMAN FASILITAS
+       SMPIT NUR HIDAYAH
+       Gaya: paper collage, botanical, playful
+    ========================================= */
+
+    .halaman-fasilitas {
+      --fas-kuning: var(--kuning, #ffc928);
+      --fas-kuning-muda: var(--kuning-muda, #fff0a9);
+      --fas-oranye: var(--oranye, #ff710d);
+      --fas-hijau: var(--hijau, #07815b);
+      --fas-hijau-tua: var(--hijau-tua, #064c3b);
+      --fas-biru: var(--biru, #1455bc);
+      --fas-krem: var(--kertas, #fff5df);
+      --fas-tinta: var(--tinta, #075b54);
+
+      overflow: hidden;
+      color: var(--fas-tinta);
+    }
+
+    .halaman-fasilitas *,
+    .halaman-fasilitas *::before,
+    .halaman-fasilitas *::after {
+      box-sizing: border-box;
+    }
+
+    .halaman-fasilitas img {
+      display: block;
+      max-width: 100%;
+    }
+
+    .halaman-fasilitas a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .fas-container {
+      width: min(1160px, calc(100% - 48px));
+      margin-inline: auto;
+    }
+
+    .fas-font-tangan {
+      font-family: "Kalam", cursive;
+    }
+
+    /* =========================================
+       DEKORASI KERTAS
+    ========================================= */
+
+    .fas-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding: 9px 16px;
+      background: var(--fas-kuning-muda);
+      border: 1.5px solid rgba(95, 75, 25, .12);
+      border-radius: 8px 15px 7px 13px;
+      color: #795315;
+      font-size: .78rem;
+      font-weight: 900;
+      letter-spacing: 1.3px;
+      transform: rotate(-2deg);
+      box-shadow: 3px 4px 0 rgba(120, 91, 23, .07);
+    }
+
+    .fas-label::before {
+      content: "✳";
+      color: var(--fas-oranye);
+      font-size: 1rem;
+    }
+
+    .fas-judul {
+      margin: 17px 0;
+      color: var(--fas-hijau-tua);
+      font-family: "Nunito", sans-serif;
+      font-size: clamp(2.15rem, 5vw, 3.8rem);
+      font-weight: 900;
+      line-height: 1.12;
+      letter-spacing: -1.7px;
+    }
+
+    .fas-judul .fas-teks-warna {
+      position: relative;
+      display: inline-block;
+      color: var(--fas-oranye);
+      font-family: "Kalam", cursive;
+      font-weight: 700;
+      letter-spacing: -1px;
+      transform: rotate(-2deg);
+    }
+
+    .fas-judul .fas-teks-warna::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: -3px;
+      left: 0;
+      height: 7px;
+      background: var(--fas-kuning);
+      border-radius: 50%;
+      opacity: .85;
+      z-index: -1;
+      transform: rotate(-1deg);
+    }
+
+    .fas-deskripsi {
+      max-width: 650px;
+      margin: 0;
+      color: #55736a;
+      font-size: 1rem;
+      line-height: 1.9;
+    }
+
+    /* =========================================
+       HERO
+    ========================================= */
+
+    .fas-hero {
+      position: relative;
+      isolation: isolate;
+      padding: 82px 0 90px;
+      background:
+        radial-gradient(ellipse at 8% 18%, rgba(255, 201, 40, .18), transparent 28%),
+        radial-gradient(ellipse at 92% 75%, rgba(7, 129, 91, .10), transparent 30%),
+        var(--fas-krem);
+    }
+
+    .fas-hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
+      opacity: .24;
+      background-image: radial-gradient(#b89c65 .8px, transparent .8px);
+      background-size: 15px 15px;
+      mask-image: linear-gradient(to bottom, black, transparent 90%);
+    }
+
+    .fas-hero::after {
+      content: "";
+      position: absolute;
+      right: -65px;
+      bottom: -90px;
+      z-index: -1;
+      width: 270px;
+      height: 210px;
+      background: var(--fas-kuning);
+      border-radius: 46% 54% 60% 40% / 48% 43% 57% 52%;
+      opacity: .22;
+      transform: rotate(-15deg);
+    }
+
+    .fas-hero-grid {
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      align-items: center;
+      gap: 65px;
+    }
+
+    .fas-hero-copy {
+      position: relative;
+      z-index: 2;
+    }
+
+    .fas-hero-copy .fas-deskripsi {
+      margin-top: 20px;
+    }
+
+    .fas-hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 14px;
+      margin-top: 30px;
+    }
+
+    .fas-tombol {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 49px;
+      padding: 13px 22px;
+      border: 2px solid transparent;
+      border-radius: 12px 16px 11px 15px;
+      font-family: "Nunito", sans-serif;
+      font-size: .92rem;
+      font-weight: 900;
+      text-decoration: none;
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+
+    .fas-tombol:hover {
+      transform: translateY(-4px) rotate(-1deg);
+    }
+
+    .fas-tombol-utama {
+      background: var(--fas-kuning);
+      color: #51400a;
+      box-shadow: 4px 5px 0 rgba(117, 91, 20, .17);
+    }
+
+    .fas-tombol-sekunder {
+      border-color: rgba(7, 91, 84, .23);
+      background: rgba(255, 255, 255, .6);
+      color: var(--fas-hijau-tua);
+    }
+
+    .fas-hero-visual {
+      position: relative;
+      min-width: 0;
+      padding: 15px 12px 20px;
+    }
+
+    .fas-hero-foto {
+      position: relative;
+      overflow: hidden;
+      aspect-ratio: 1.08 / .88;
+      padding: 10px;
+      background: #fffdf6;
+      border: 1px solid rgba(90, 69, 31, .12);
+      border-radius: 7px 17px 9px 15px;
+      box-shadow: 9px 12px 0 rgba(7, 91, 84, .10), 0 15px 35px rgba(63, 64, 32, .12);
+      transform: rotate(2deg);
+    }
+
+    .fas-hero-foto img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 4px 10px 5px 9px;
+    }
+
+    .fas-stiker {
+      position: absolute;
+      z-index: 3;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      font-family: "Kalam", cursive;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+
+    .fas-stiker-kuning {
+      top: -6px;
+      right: -7px;
+      width: 95px;
+      height: 95px;
+      padding: 12px;
+      background: var(--fas-kuning);
+      color: #694a08;
+      border-radius: 50% 46% 48% 42%;
+      box-shadow: 3px 5px 0 rgba(100, 72, 8, .12);
+      transform: rotate(10deg);
+    }
+
+    .fas-stiker-hijau {
+      bottom: 0;
+      left: -22px;
+      padding: 12px 19px;
+      background: var(--fas-hijau);
+      color: white;
+      border: 2px dashed rgba(255, 255, 255, .75);
+      border-radius: 8px 16px 8px 15px;
+      transform: rotate(-5deg);
+    }
+
+    .fas-coretan {
+      position: absolute;
+      top: 10%;
+      left: -25px;
+      color: var(--fas-oranye);
+      font-family: "Kalam", cursive;
+      font-size: 2.7rem;
+      transform: rotate(-15deg);
+    }
+
+    .fas-scroll {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 34px;
+      color: #6c8278;
+      font-size: .78rem;
+      font-weight: 800;
+      letter-spacing: .8px;
+    }
+
+    .fas-scroll-garis {
+      width: 42px;
+      height: 2px;
+      background: var(--fas-oranye);
+      border-radius: 10px;
+    }
+
+    /* =========================================
+       PENGANTAR SINGKAT
+    ========================================= */
+
+    .fas-pengantar {
+      position: relative;
+      padding: 55px 0;
+      background: #fffdf6;
+    }
+
+    .fas-pengantar-grid {
+      display: grid;
+      grid-template-columns: .8fr 1.2fr;
+      align-items: center;
+      gap: 50px;
+    }
+
+    .fas-pengantar-kartu {
+      position: relative;
+      padding: 27px 28px;
+      background: #fff0a9;
+      border-radius: 5px 15px 7px 12px;
+      box-shadow: 5px 7px 0 rgba(110, 89, 23, .09);
+      transform: rotate(-1deg);
+    }
+
+    .fas-pengantar-kartu::before {
+      content: "";
+      position: absolute;
+      top: -10px;
+      left: 40%;
+      width: 90px;
+      height: 22px;
+      background: rgba(255, 113, 13, .28);
+      transform: rotate(-3deg);
+    }
+
+    .fas-pengantar-kartu .fas-font-tangan {
+      display: block;
+      margin-bottom: 7px;
+      color: #80530c;
+      font-size: 1.15rem;
+    }
+
+    .fas-pengantar-kartu strong {
+      display: block;
+      color: #57420d;
+      font-size: 1.35rem;
+      line-height: 1.45;
+    }
+
+    .fas-pengantar-teks p {
+      margin: 0;
+      color: #5e766c;
+      font-size: .96rem;
+      line-height: 1.95;
+    }
+
+    /* =========================================
+       GALERI FASILITAS
+    ========================================= */
+
+    .fas-galeri {
+      position: relative;
+      padding: 90px 0 100px;
+      background:
+        radial-gradient(ellipse at 0% 40%, rgba(255, 201, 40, .12), transparent 25%),
+        radial-gradient(ellipse at 100% 70%, rgba(7, 129, 91, .09), transparent 28%),
+        #f9f5e9;
+    }
+
+    .fas-galeri::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      height: 10px;
+      opacity: .55;
+      background: repeating-linear-gradient(
+        135deg,
+        transparent 0,
+        transparent 10px,
+        rgba(7, 91, 84, .08) 10px,
+        rgba(7, 91, 84, .08) 12px
+      );
+    }
+
+    .fas-galeri-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 30px;
+      margin-bottom: 35px;
+    }
+
+    .fas-galeri-header .fas-judul {
+      max-width: 650px;
+      margin-bottom: 0;
+      font-size: clamp(2rem, 4vw, 3.1rem);
+    }
+
+    .fas-galeri-header .fas-deskripsi {
+      max-width: 340px;
+      font-size: .9rem;
+    }
+
+    /* Filter kategori */
+
+    .fas-filter-wrap {
+      margin-bottom: 34px;
+    }
+
+    .fas-filter {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    .fas-filter button {
+      position: relative;
+      padding: 11px 19px;
+      border: 1.5px solid rgba(7, 91, 84, .18);
+      border-radius: 10px 15px 9px 13px;
+      background: rgba(255, 253, 246, .86);
+      color: var(--fas-hijau-tua);
+      font-family: "Nunito", sans-serif;
+      font-size: .84rem;
+      font-weight: 900;
+      cursor: pointer;
+      transition: background .25s ease, color .25s ease, transform .25s ease;
+    }
+
+    .fas-filter button:hover {
+      transform: translateY(-2px) rotate(-1deg);
+    }
+
+    .fas-filter button[aria-pressed="true"] {
+      border-color: var(--fas-hijau);
+      background: var(--fas-hijau);
+      color: white;
+      box-shadow: 3px 4px 0 rgba(7, 91, 84, .14);
+    }
+
+    .fas-filter button[aria-pressed="true"]::before {
+      content: "✳ ";
+      color: var(--fas-kuning);
+    }
+
+    /* Grid galeri */
+
+    .fas-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      align-items: stretch;
+      gap: 30px 25px;
+    }
+
+    .fas-kartu {
+      position: relative;
+      min-width: 0;
+      opacity: 1;
+      transform: translateY(0);
+      transition: opacity .3s ease, transform .3s ease;
+    }
+
+    .fas-kartu[hidden] {
+      display: none !important;
+    }
+
+    .fas-kartu.fas-masuk {
+      animation: fasMasuk .42s ease both;
+    }
+
+    @keyframes fasMasuk {
+      from {
+        opacity: 0;
+        transform: translateY(14px) scale(.98);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    .fas-kartu-visual {
+      position: relative;
+      overflow: hidden;
+      aspect-ratio: 1.12 / .86;
+      padding: 8px;
+      background: #fffdf6;
+      border: 1px solid rgba(91, 73, 37, .12);
+      border-radius: 6px 15px 7px 13px;
+      box-shadow: 4px 6px 0 rgba(80, 66, 35, .07);
+      transform: rotate(-1deg);
+      transition: transform .3s ease, box-shadow .3s ease;
+    }
+
+    .fas-kartu:nth-child(3n + 2) .fas-kartu-visual {
+      transform: rotate(1.3deg);
+    }
+
+    .fas-kartu:nth-child(3n) .fas-kartu-visual {
+      transform: rotate(-.4deg);
+    }
+
+    .fas-kartu:hover .fas-kartu-visual {
+      z-index: 2;
+      transform: translateY(-5px) rotate(0deg);
+      box-shadow: 7px 10px 0 rgba(80, 66, 35, .09), 0 14px 25px rgba(50, 65, 45, .10);
+    }
+
+    .fas-kartu-visual img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 4px 10px 5px 9px;
+      transition: transform .55s ease;
+    }
+
+    .fas-kartu:hover .fas-kartu-visual img {
+      transform: scale(1.055);
+    }
+
+    .fas-kategori-label {
+      position: absolute;
+      top: 17px;
+      left: 17px;
+      z-index: 2;
+      padding: 6px 11px;
+      border: 1px solid rgba(255, 255, 255, .7);
+      border-radius: 7px 11px 6px 10px;
+      background: var(--fas-kuning);
+      color: #60470a;
+      font-size: .68rem;
+      font-weight: 900;
+      letter-spacing: .35px;
+      box-shadow: 2px 3px 0 rgba(60, 50, 20, .10);
+    }
+
+    .fas-kartu:nth-child(3n + 2) .fas-kategori-label {
+      background: #c9efd6;
+      color: #145c3d;
+    }
+
+    .fas-kartu:nth-child(3n) .fas-kategori-label {
+      background: #d5e5ff;
+      color: #16488f;
+    }
+
+    .fas-kartu-isi {
+      padding: 17px 5px 0;
+    }
+
+    .fas-kartu-isi h3 {
+      margin: 0 0 8px;
+      color: var(--fas-hijau-tua);
+      font-family: "Nunito", sans-serif;
+      font-size: 1.15rem;
+      font-weight: 900;
+      line-height: 1.4;
+    }
+
+    .fas-kartu-isi p {
+      margin: 0;
+      color: #61786e;
+      font-size: .86rem;
+      line-height: 1.8;
+    }
+
+    .fas-kartu-garis {
+      display: block;
+      width: 42px;
+      height: 4px;
+      margin-top: 15px;
+      background: var(--fas-oranye);
+      border-radius: 50%;
+      transform: rotate(-2deg);
+    }
+
+    .fas-kartu:nth-child(3n + 2) .fas-kartu-garis {
+      background: var(--fas-hijau);
+    }
+
+    .fas-kartu:nth-child(3n) .fas-kartu-garis {
+      background: var(--fas-biru);
+    }
+
+    .fas-kosong {
+      display: none;
+      padding: 40px 20px;
+      color: #61786e;
+      text-align: center;
+    }
+
+    .fas-kosong.aktif {
+      display: block;
+    }
+
+    .fas-kosong strong {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--fas-hijau-tua);
+      font-size: 1.2rem;
+    }
+
+    /* =========================================
+       CATATAN FASILITAS
+    ========================================= */
+
+    .fas-catatan {
+      position: relative;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      align-items: start;
+      gap: 18px;
+      max-width: 820px;
+      padding: 23px 25px;
+      margin: 55px auto 0;
+      background: rgba(255, 253, 246, .88);
+      border: 1px dashed rgba(7, 91, 84, .35);
+      border-radius: 12px 7px 14px 8px;
+    }
+
+    .fas-catatan-ikon {
+      display: grid;
+      place-items: center;
+      width: 43px;
+      height: 43px;
+      border-radius: 50%;
+      background: var(--fas-kuning-muda);
+      font-size: 1.35rem;
+    }
+
+    .fas-catatan h3 {
+      margin: 0 0 6px;
+      color: var(--fas-hijau-tua);
+      font-size: 1rem;
+      font-weight: 900;
+    }
+
+    .fas-catatan p {
+      margin: 0;
+      color: #61786e;
+      font-size: .84rem;
+      line-height: 1.8;
+    }
+
+    /* =========================================
+       CTA
+    ========================================= */
+
+    .fas-cta {
+      position: relative;
+      padding: 85px 0;
+      overflow: hidden;
+      background: var(--fas-hijau-tua);
+      color: white;
+    }
+
+    .fas-cta::before,
+    .fas-cta::after {
+      content: "";
+      position: absolute;
+      width: 240px;
+      height: 240px;
+      border: 2px dashed rgba(255, 255, 255, .13);
+      border-radius: 42% 58% 45% 55%;
+      pointer-events: none;
+    }
+
+    .fas-cta::before {
+      top: -115px;
+      left: -65px;
+      transform: rotate(30deg);
+    }
+
+    .fas-cta::after {
+      right: -90px;
+      bottom: -145px;
+      transform: rotate(-25deg);
+    }
+
+    .fas-cta-inner {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 35px;
+    }
+
+    .fas-cta .fas-label {
+      background: var(--fas-kuning);
+      color: #60470a;
+    }
+
+    .fas-cta h2 {
+      max-width: 680px;
+      margin: 20px 0 13px;
+      color: #fffdf6;
+      font-family: "Nunito", sans-serif;
+      font-size: clamp(2rem, 4vw, 3.1rem);
+      font-weight: 900;
+      line-height: 1.17;
+      letter-spacing: -1px;
+    }
+
+    .fas-cta h2 span {
+      color: var(--fas-kuning);
+      font-family: "Kalam", cursive;
+    }
+
+    .fas-cta p {
+      max-width: 600px;
+      margin: 0;
+      color: rgba(255, 255, 255, .78);
+      font-size: .95rem;
+      line-height: 1.9;
+    }
+
+    .fas-cta .fas-tombol {
+      flex-shrink: 0;
+      background: var(--fas-kuning);
+      color: #57420d;
+      box-shadow: 4px 5px 0 rgba(0, 0, 0, .14);
+    }
+
+    /* =========================================
+       RESPONSIVE
+    ========================================= */
+
+    @media (max-width: 1000px) {
+      .fas-hero-grid {
+        gap: 35px;
+      }
+
+      .fas-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 30px 24px;
+      }
+
+      .fas-pengantar-grid {
+        gap: 30px;
+      }
+
+      .fas-galeri-header {
+        align-items: start;
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .fas-galeri-header .fas-deskripsi {
+        max-width: 600px;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .fas-container {
+        width: min(100% - 34px, 560px);
+      }
+
+      .fas-hero {
+        padding: 55px 0 65px;
+      }
+
+      .fas-hero-grid {
+        grid-template-columns: 1fr;
+        gap: 38px;
+      }
+
+      .fas-hero-copy {
+        text-align: center;
+      }
+
+      .fas-hero-copy .fas-deskripsi {
+        margin-inline: auto;
+      }
+
+      .fas-hero-actions {
+        justify-content: center;
+      }
+
+      .fas-scroll {
+        justify-content: center;
+      }
+
+      .fas-hero-visual {
+        width: min(100%, 480px);
+        margin-inline: auto;
+      }
+
+      .fas-coretan {
+        left: -7px;
+      }
+
+      .fas-pengantar {
+        padding: 42px 0;
+      }
+
+      .fas-pengantar-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+
+      .fas-pengantar-kartu {
+        max-width: 420px;
+        width: 100%;
+        margin-inline: auto;
+      }
+
+      .fas-galeri {
+        padding: 65px 0 75px;
+      }
+
+      .fas-judul {
+        letter-spacing: -1px;
+      }
+
+      .fas-cta {
+        padding: 65px 0;
+      }
+
+      .fas-cta-inner {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        text-align: center;
+      }
+
+      .fas-cta p {
+        margin-inline: auto;
+      }
+
+      .fas-cta .fas-tombol {
+        justify-self: center;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .fas-container {
+        width: calc(100% - 30px);
+      }
+
+      .fas-hero {
+        padding-top: 42px;
+      }
+
+      .fas-judul {
+        font-size: 2.2rem;
+      }
+
+      .fas-hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .fas-tombol {
+        width: 100%;
+      }
+
+      .fas-stiker-kuning {
+        right: -3px;
+        width: 77px;
+        height: 77px;
+        font-size: .85rem;
+      }
+
+      .fas-stiker-hijau {
+        left: -5px;
+        font-size: .88rem;
+      }
+
+      .fas-filter {
+        gap: 8px;
+      }
+
+      .fas-filter button {
+        padding: 10px 13px;
+        font-size: .78rem;
+      }
+
+      .fas-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+
+      .fas-kartu-visual {
+        aspect-ratio: 1.25 / .85;
+      }
+
+      .fas-kartu-isi h3 {
+        font-size: 1.15rem;
+      }
+
+      .fas-catatan {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        padding: 20px;
+        margin-top: 38px;
+      }
+
+      .fas-cta h2 {
+        font-size: 2rem;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .halaman-fasilitas *,
+      .halaman-fasilitas *::before,
+      .halaman-fasilitas *::after {
+        scroll-behavior: auto !important;
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- DEKORASI DAUN DARI CSS UTAMA -->
+  <div class="dekor-daun daun-kiri" aria-hidden="true"></div>
+  <div class="dekor-daun daun-kanan" aria-hidden="true"></div>
+
+   <svg class="dekor-daun daun-kiri" viewBox="0 0 140 180" aria-hidden="true">
+    <path d="M15 170 Q65 100 92 18" fill="none" stroke="#087f5b" stroke-width="4"/>
+    <path d="M48 122 Q-4 117 8 73 Q49 73 48 122Z" fill="#159b65"/>
+    <path d="M68 82 Q39 35 78 12 Q106 43 68 82Z" fill="#087f5b"/>
+    <path d="M29 151 Q-15 148 3 111 Q34 113 29 151Z" fill="#f4b900"/>
+  </svg>
+
+  <svg class="dekor-daun daun-kanan" viewBox="0 0 140 180" aria-hidden="true">
+    <path d="M20 170 Q80 105 108 15" fill="none" stroke="#087f5b" stroke-width="4"/>
+    <path d="M64 119 Q20 104 38 68 Q75 74 64 119Z" fill="#159b65"/>
+    <path d="M86 72 Q59 29 97 10 Q124 42 86 72Z" fill="#087f5b"/>
+    <path d="M40 149 Q1 142 19 111 Q48 115 40 149Z" fill="#f4b900"/>
+  </svg>
+
+  <!-- PITA INFORMASI -->
+  <div class="pita-atas">
+    <div class="pita-pesan">
+      <span>✦</span> Bersama Al-Qur'an, Menuju Generasi Unggul!
+    </div>
+
+    <div class="sosial-mini">
+      <a href="https://instagram.com/" target="_blank" rel="noreferrer">◎ Instagram</a>
+      <a href="https://facebook.com/" target="_blank" rel="noreferrer">f Facebook</a>
+      <a href="https://youtube.com/" target="_blank" rel="noreferrer">▶ YouTube</a>
+      <a href="https://tiktok.com/" target="_blank" rel="noreferrer">♪ TikTok</a>
+    </div>
+  </div>
+
+  <!-- HEADER: STRUKTUR DAN LOGO ASLI DIPERTAHANKAN -->
+  <header class="header-utama">
+    <a class="identitas" href="beranda.html" aria-label="SMPIT Nur Hidayah, beranda">
+      <div class="logo-sekolah">
+        <svg viewBox="0 0 70 80" role="img" aria-label="Logo sementara">
+          <path d="M35 5 L54 17 L54 40 Q52 59 35 71 Q18 59 16 40 L16 17Z" fill="#087f5b"/>
+          <path d="M35 13 L45 22 L45 40 Q43 52 35 59 Q27 52 25 40 L25 22Z" fill="#f5bd26"/>
+          <path d="M35 23 L38 33 L48 33 L40 39 L43 49 L35 43 L27 49 L30 39 L22 33 L32 33Z" fill="#fff9e9"/>
+          <path d="M9 33 Q17 17 24 18 M61 33 Q53 17 46 18" stroke="#159b65" stroke-width="3" fill="none" stroke-linecap="round"/>
+        </svg>
+      </div>
+
+      <div>
+        <div class="nama-sekolah">SMPIT<br>Nur Hidayah</div>
+        <div class="slogan-logo">Islami · Cerdas · Berprestasi</div>
+      </div>
+    </a>
+
+    <button class="tombol-menu" aria-label="Buka menu" aria-expanded="false" aria-controls="menu-navigasi">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="menu-navigasi" id="menu-navigasi" aria-label="Navigasi utama">
+      <a href="beranda.html">Beranda</a>
+      <a href="beranda.html#tentang">Detail</a>
+
+      <div class="nav-dropdown">
+        <a class="nav-dropdown-toggle aktif" href="#profil-hero" aria-haspopup="true">
+          Tentang Kami <span class="nav-chevron" aria-hidden="true">⌄</span>
+        </a>
+
+        <div class="nav-dropdown-menu">
+          <a class="aktif" href="profil.html">Profil</a>
+          <a href="sambutan.html">Sambutan Kepala Sekolah</a>
+          <a href="fasilitas.html">Fasilitas</a>
+          <a href="kegiatan.html">Kegiatan</a>
+          <a href="prestasi.html">Prestasi</a>
+          <a href="kontak.html">Kontak</a>
+        </div>
+      </div>
+    </nav>
+
+    <a class="tombol-ppdb" href="beranda.html#daftar">
+      PPDB 2026/2027 <span>→</span>
+    </a>
+  </header>
+
+  <main class="halaman-fasilitas">
+
+    <!-- ======================================
+         HERO
+    ======================================= -->
+
+    <section class="fas-hero">
+      <div class="fas-container fas-hero-grid">
+
+        <div class="fas-hero-copy" data-animasi>
+          <span class="fas-label">FASILITAS SEKOLAH</span>
+
+          <h1 class="fas-judul">
+            Ruang untuk<br>
+            Belajar &amp; <span class="fas-teks-warna">Bertumbuh!</span>
+          </h1>
+
+          <p class="fas-deskripsi">
+            Setiap ruang punya cerita dan setiap sudut punya kesempatan
+            untuk belajar. Yuk, kenali berbagai fasilitas yang mendukung
+            perjalanan siswa SMPIT Nur Hidayah dalam tumbuh, berkarya,
+            dan meraih prestasi.
+          </p>
+
+          <div class="fas-hero-actions">
+            <a href="#galeri-fasilitas" class="fas-tombol fas-tombol-utama">
+              Jelajahi Fasilitas <span aria-hidden="true">↓</span>
+            </a>
+
+            <a href="profil.html" class="fas-tombol fas-tombol-sekunder">
+              Kenali Sekolah
+            </a>
+          </div>
+
+          <div class="fas-scroll">
+            <span class="fas-scroll-garis"></span>
+            <span>GESER UNTUK MENJELAJAH</span>
+          </div>
+        </div>
+
+        <div class="fas-hero-visual" data-animasi>
+          <span class="fas-coretan" aria-hidden="true">✳</span>
+
+          <div class="fas-hero-foto">
+            <img
+              src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=1100&q=85"
+              alt="Suasana ruang sekolah"
+              fetchpriority="high"
+            >
+          </div>
+
+          <div class="fas-stiker fas-stiker-kuning">
+            Belajar<br>lebih seru!
+          </div>
+
+          <div class="fas-stiker fas-stiker-hijau">
+            🌿 Nyaman &amp; inspiratif
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================
+         PENGANTAR
+    ======================================= -->
+
+    <section class="fas-pengantar">
+      <div class="fas-container fas-pengantar-grid">
+
+        <div class="fas-pengantar-kartu" data-animasi>
+          <span class="fas-font-tangan">Bukan sekadar ruangan...</span>
+          <strong>
+            Tempat ide tumbuh, karakter terbentuk, dan mimpi dimulai.
+          </strong>
+        </div>
+
+        <div class="fas-pengantar-teks" data-animasi>
+          <span class="fas-label">LEBIH DARI SEKADAR TEMPAT</span>
+
+          <h2 class="fas-judul">
+            Mendukung Setiap<br>
+            <span class="fas-teks-warna">Potensi Siswa</span>
+          </h2>
+
+          <p>
+            Lingkungan belajar yang baik membantu siswa merasa nyaman
+            untuk bertanya, mencoba hal baru, bekerja sama, dan
+            mengembangkan kemampuannya. Karena itu, fasilitas sekolah
+            menjadi bagian penting dalam mendukung pembelajaran,
+            pembiasaan ibadah, aktivitas fisik, dan kreativitas.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================
+         GALERI DAN FILTER
+    ======================================= -->
+
+    <section class="fas-galeri" id="galeri-fasilitas">
+      <div class="fas-container">
+
+        <div class="fas-galeri-header" data-animasi>
+          <div>
+            <span class="fas-label">INTIP SETIAP SUDUTNYA</span>
+
+            <h2 class="fas-judul">
+              Sudut Favorit<br>
+              <span class="fas-teks-warna">untuk Bertumbuh</span>
+            </h2>
+          </div>
+
+          <p class="fas-deskripsi">
+            Pilih kategori yang ingin kamu lihat. Dari ruang belajar
+            sampai area aktivitas, setiap fasilitas punya perannya sendiri!
+          </p>
+        </div>
+
+        <!-- Filter fasilitas -->
+        <div class="fas-filter-wrap" data-animasi>
+          <div class="fas-filter" role="group" aria-label="Filter kategori fasilitas">
+
+            <button type="button" data-filter="semua" aria-pressed="true">
+              Semua
+            </button>
+
+            <button type="button" data-filter="akademik" aria-pressed="false">
+              📚 Akademik
+            </button>
+
+            <button type="button" data-filter="ibadah" aria-pressed="false">
+              🌙 Ibadah
+            </button>
+
+            <button type="button" data-filter="olahraga" aria-pressed="false">
+              ⚽ Olahraga
+            </button>
+
+            <button type="button" data-filter="umum" aria-pressed="false">
+              🌿 Fasilitas Umum
+            </button>
+
+          </div>
+        </div>
+
+        <!-- Kartu fasilitas -->
+        <div class="fas-grid" id="daftar-fasilitas">
+
+          <!-- 1. Ruang kelas -->
+          <article class="fas-kartu" data-kategori="akademik" data-animasi>
+            <div class="fas-kartu-visual">
+              <img
+                src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=850&q=80"
+                alt="Ilustrasi ruang kelas untuk kegiatan belajar"
+                loading="lazy"
+              >
+              <span class="fas-kategori-label">Akademik</span>
+            </div>
+
+            <div class="fas-kartu-isi">
+              <h3>Ruang Kelas</h3>
+              <p>
+                Ruang untuk belajar, berdiskusi, dan mengembangkan
+                pengetahuan bersama teman-teman.
+              </p>
+              <span class="fas-kartu-garis"></span>
+            </div>
+          </article>
+
+          <!-- 2. Perpustakaan -->
+          <article class="fas-kartu" data-kategori="akademik" data-animasi>
+            <div class="fas-kartu-visual">
+              <img
+                src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=850&q=80"
+                alt="Rak buku di perpustakaan"
+                loading="lazy"
+              >
+              <span class="fas-kategori-label">Akademik</span>
+            </div>
+
+            <div class="fas-kartu-isi">
+              <h3>Perpustakaan</h3>
+              <p>
+                Tempat menjelajahi pengetahuan, membaca buku,
+                dan menumbuhkan rasa ingin tahu.
+              </p>
+              <span class="fas-kartu-garis"></span>
+            </div>
+          </article>
+
+          <!-- 3. Laboratorium -->
+          <article class="fas-kartu" data-kategori="akademik" data-animasi>
+            <div class="fas-kartu-visual">
+              <img
+                src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=850&q=80"
+                alt="Peralatan laboratorium untuk pembelajaran sains"
+                loading="lazy"
+              >
+              <span class="fas-kategori-label">Akademik</span>
+            </div>
+
+            <div class="fas-kartu-isi">
+              <h3>Laboratorium</h3>
+              <p>
+                Ruang untuk mengenal sains melalui pengamatan,
+                percobaan, dan pembelajaran praktik.
+              </p>
+              <span class="fas-kartu-garis"></span>
+            </div>
+          </article>
+
+          <!-- 4. Masjid atau musala -->
+          <article class="fas-kartu" data-kategori="ibadah" data-animasi>
+            <div class="fas-kartu-visual">
+              <img
+                src="https://images.unsplash.com/photo-1564769625905-50e93615e769?auto=format&fit=crop&w=850&q=80"
+                alt="Arsitektur masjid sebagai ilustrasi fasilitas ibadah"
+                loading="lazy"
+              >
+              <span class="fas-kategori-label">Ibadah</span>
+            </div>
+
+            <div class="fas-kartu-isi">
+              <h3>Masjid / Musala</h3>
+              <p>
+                Area untuk beribadah dan membangun kebiasaan
+                mendekatkan diri kepada Allah.
+              </p>
+              <span class="fas-kartu-garis"></span>
+            </div>
+          </article>
+
+          <!-- 5. Lapangan olahraga -->
+          <article class="fas-kartu" data-kategori="olahraga" data-animasi>
+            <div class="fas-kartu-visual">
+              <img
+                src="https://images.unsplash.com/photo-1526676037777-05a232554f77?auto=format&fit=crop&w=850&q=80"
+                alt="Lapangan untuk aktivitas dan olahraga"
+                loading="lazy"
+              >
+              <span class="fas-kategori-label">Olahraga</span>
+            </div>
+
+            <div class="fas-kartu-isi">
+              <h3>Lapangan Olahraga</h3>
+              <p>
+                Tempat bergerak aktif, melatih kerja sama,
+                sportivitas, dan semangat kebersamaan.
+              </p>
+              <span class="fas-kartu-garis"></span>
+            </div>
+          </article>
+
+          <!-- 6. Ruang komputer -->
+          <article class="fas-kartu" data-kategori="akademik" data-animasi>
+            <div class="fas-kartu-visual">
+              <img
+                src="https://images.unsplash.com/photo-1584697964358-3e14ca57658b?auto=format&fit=crop&w=850&q=80"
+                alt="Perangkat komputer untuk pembelajaran teknologi"
+                loading="lazy"
+              >
+              <span class="fas-kategori-label">Akademik</span>
+            </div>
+
+            <div class="fas-kartu-isi">
+              <h3>Ruang Komputer</h3>
+              <p>
+                Mendukung pengenalan teknologi digital dan
+                keterampilan menggunakan komputer.
+              </p>
+              <span class="fas-kartu-garis"></span>
+            </div>
+          </article>
+
+          <!-- 7. Taman sekolah -->
+          <article class="fas-kartu" data-kategori="umum" data-animasi>
+            <div class="fas-kartu-visual">
+              <img
+                src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=850&q=80"
+                alt="Area hijau dengan pepohonan"
+                loading="lazy"
+              >
+              <span class="fas-kategori-label">Fasilitas Umum</span>
+            </div>
+
+            <div class="fas-kartu-isi">
+              <h3>Area Hijau</h3>
+              <p>
+                Sentuhan alam yang menghadirkan suasana segar
+                sekaligus mengingatkan pentingnya menjaga lingkungan.
+              </p>
+              <span class="fas-kartu-garis"></span>
+            </div>
+          </article>
+
+          <!-- 8. Aula serbaguna -->
+          <article class="fas-kartu" data-kategori="umum" data-animasi>
+            <div class="fas-kartu-visual">
+              <img
+                src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?auto=format&fit=crop&w=850&q=80"
+                alt="Ruangan luas untuk pertemuan dan kegiatan bersama"
+                loading="lazy"
+              >
+              <span class="fas-kategori-label">Fasilitas Umum</span>
+            </div>
+
+            <div class="fas-kartu-isi">
+              <h3>Aula Serbaguna</h3>
+              <p>
+                Dapat digunakan untuk berbagai kegiatan bersama,
+                pertemuan, dan acara sekolah sesuai kebutuhan.
+              </p>
+              <span class="fas-kartu-garis"></span>
+            </div>
+          </article>
+
+          <!-- 9. UKS -->
+          <article class="fas-kartu" data-kategori="umum" data-animasi>
+            <div class="fas-kartu-visual">
+              <img
+                src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=850&q=80"
+                alt="Ilustrasi ruang pelayanan kesehatan"
+                loading="lazy"
+              >
+              <span class="fas-kategori-label">Fasilitas Umum</span>
+            </div>
+
+            <div class="fas-kartu-isi">
+              <h3>Ruang Kesehatan</h3>
+              <p>
+                Area pendukung untuk perhatian terhadap kesehatan
+                dan kenyamanan siswa selama berada di sekolah.
+              </p>
+              <span class="fas-kartu-garis"></span>
+            </div>
+          </article>
+
+        </div>
+
+        <div class="fas-kosong" id="fasilitas-kosong" aria-live="polite">
+          <strong>Belum ada fasilitas dalam kategori ini.</strong>
+          Silakan pilih kategori lainnya.
+        </div>
+
+        <!-- Catatan keakuratan foto -->
+        <aside class="fas-catatan" data-animasi>
+          <div class="fas-catatan-ikon" aria-hidden="true">📌</div>
+
+          <div>
+            <h3>Catatan untuk galeri fasilitas</h3>
+            <p>
+              Foto pada halaman ini merupakan gambar ilustrasi dari sumber
+              eksternal, bukan dokumentasi terverifikasi fasilitas SMPIT
+              Nur Hidayah. Nama dan keterangan fasilitas juga perlu
+              disesuaikan dengan fasilitas yang benar-benar tersedia di
+              sekolah sebelum website dipublikasikan.
+            </p>
+          </div>
+        </aside>
+
+      </div>
+    </section>
+
+    <!-- ======================================
+         CTA
+    ======================================= -->
+
+    <section class="fas-cta">
+      <div class="fas-container fas-cta-inner">
+
+        <div data-animasi>
+          <span class="fas-label">YUK, KENALI LEBIH DEKAT!</span>
+
+          <h2>
+            Setiap sudut punya cerita.<br>
+            <span>Setiap anak punya potensi.</span>
+          </h2>
+
+          <p>
+            Kenali lebih jauh lingkungan belajar, nilai, dan kegiatan
+            yang menjadi bagian dari perjalanan pendidikan di
+            SMPIT Nur Hidayah.
+          </p>
+        </div>
+
+        <a href="profil.html" class="fas-tombol" data-animasi>
+          Jelajahi Profil Sekolah <span aria-hidden="true">↗</span>
+        </a>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" id="kontak">
+    <div class="footer-utama">
+      <a class="identitas identitas-footer" href="#beranda">
+        <div class="logo-sekolah logo-footer">
+          <svg viewBox="0 0 70 80" aria-hidden="true">
+            <path d="M35 5 L54 17 L54 40 Q52 59 35 71 Q18 59 16 40 L16 17Z" fill="#fff8e8"/>
+            <path d="M35 13 L45 22 L45 40 Q43 52 35 59 Q27 52 25 40 L25 22Z" fill="#f5bd26"/>
+            <path d="M35 23 L38 33 L48 33 L40 39 L43 49 L35 43 L27 49 L30 39 L22 33 L32 33Z" fill="#087f5b"/>
+          </svg>
+        </div>
+        <div><div class="nama-sekolah">SMPIT Nur Hidayah</div><div class="slogan-logo">Islami · Cerdas · Berprestasi</div></div>
+      </a>
+      <div class="footer-info">
+        <div><span>⌖</span><p>Asemrejo Rt. 47/17 Kroyo,<br>Karangmalang, Sragen,<br>Jawa Tengah 57221</p></div>
+        <div><span>☎</span><p>085113176518</p></div>
+        <div><span>✉</span><p>info@smpitnurhidayah.sch.id</p></div>
+      </div>
+      <div class="footer-sosial">
+        <a href="https://facebook.com/" aria-label="Facebook">f</a>
+        <a href="https://instagram.com/" aria-label="Instagram">◎</a>
+        <a href="https://youtube.com/" aria-label="YouTube">▶</a>
+      </div>
+    </div>
+    <div class="footer-bawah">
+      <span>© <span data-tahun>2026</span> SMPIT Nur Hidayah. All rights reserved.</span>
+      <span class="footer-motto">Berilmu · Berakhlak · Berprestasi <i></i></span>
+    </div>
+  </footer>
+
+  <!-- Tombol kembali ke atas -->
+  <button
+    class="tombol-atas"
+    type="button"
+    aria-label="Kembali ke atas"
+  >
+    ↑
+  </button>
+
+  <!-- JavaScript utama website -->
+  <script src="script.js"></script>
+
+  <!-- JavaScript khusus filter fasilitas -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const tombolFilter = document.querySelectorAll(".fas-filter button");
+      const kartuFasilitas = document.querySelectorAll(".fas-kartu");
+      const pesanKosong = document.getElementById("fasilitas-kosong");
+
+      if (!tombolFilter.length || !kartuFasilitas.length) return;
+
+      tombolFilter.forEach(function (tombol) {
+        tombol.addEventListener("click", function () {
+          const kategoriDipilih = tombol.dataset.filter;
+          let jumlahTampil = 0;
+
+          // Perbarui status tombol filter
+          tombolFilter.forEach(function (item) {
+            item.setAttribute(
+              "aria-pressed",
+              item === tombol ? "true" : "false"
+            );
+          });
+
+          // Tampilkan fasilitas sesuai kategori
+          kartuFasilitas.forEach(function (kartu) {
+            const kategoriKartu = kartu.dataset.kategori;
+            const cocok =
+              kategoriDipilih === "semua" ||
+              kategoriKartu === kategoriDipilih;
+
+            kartu.hidden = !cocok;
+
+            if (cocok) {
+              jumlahTampil++;
+
+              // Animasi masuk setiap kali filter berubah
+              kartu.classList.remove("fas-masuk");
+
+              // Memicu ulang animasi
+              void kartu.offsetWidth;
+
+              kartu.classList.add("fas-masuk");
+            } else {
+              kartu.classList.remove("fas-masuk");
+            }
+          });
+
+          // Pesan jika tidak ada fasilitas yang cocok
+          if (pesanKosong) {
+            pesanKosong.classList.toggle("aktif", jumlahTampil === 0);
+          }
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>

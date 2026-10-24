@@ -1,0 +1,1501 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#fff0d5">
+  <meta name="description" content="Hubungi SMPIT Nur Hidayah, Sragen.">
+  <title>Kontak | SMPIT Nur Hidayah</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Font mengikuti identitas visual website -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800;900&family=Kalam:wght@400;700&family=Nunito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    /* ========================================
+       SMPIT NUR HIDAYAH — HALAMAN KONTAK
+       Soft orange • Scrapbook • Treasure map
+       ======================================== */
+
+    :root {
+      --oranye: #f59e0b;
+      --kuning: #ffc928;
+      --hijau: #087f5b;
+      --hijau-muda: #d9efd8;
+      --biru: #1d4ed8;
+      --tinta: #493822;
+      --kertas: #fff7e5;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      overflow-x: hidden;
+    }
+
+    .kontak-page,
+    .kontak-page * {
+      box-sizing: border-box;
+    }
+
+    .kontak-page {
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+      color: var(--tinta);
+      background:
+        radial-gradient(ellipse at 8% 10%, rgba(255,255,255,.92), transparent 28%),
+        radial-gradient(ellipse at 92% 28%, rgba(255,197,111,.3), transparent 28%),
+        radial-gradient(ellipse at 15% 72%, rgba(255,224,172,.65), transparent 30%),
+        linear-gradient(135deg, #fff8e9 0%, #ffe8c8 38%, #fff1dc 68%, #ffdfb1 100%);
+    }
+
+    .kontak-page h1,
+    .kontak-page h2,
+    .kontak-page h3,
+    .kontak-page p,
+    .kontak-page a,
+    .kontak-page button {
+      overflow-wrap: anywhere;
+    }
+
+    .kontak-page {
+      font-family: var(--font-isi, "Nunito"), sans-serif;
+    }
+
+    .kontak-page h1,
+    .kontak-page h2,
+    .kontak-page h3 {
+      font-family: var(--font-tebal, "DM Sans"), sans-serif;
+    }
+
+    .kontak-page button,
+    .kontak-page input,
+    .kontak-page textarea,
+    .kontak-page select {
+      font: inherit;
+    }
+
+    .kontak-wrap {
+      width: min(1140px, calc(100% - 40px));
+      margin: auto;
+      padding: 65px 0 85px;
+    }
+
+    /* Doodle dekoratif */
+
+    .doodle {
+      position: absolute;
+      z-index: -1;
+      width: 75px;
+      pointer-events: none;
+      opacity: .8;
+    }
+
+    .doodle svg {
+      display: block;
+      width: 100%;
+      height: auto;
+      overflow: visible;
+    }
+
+    .doodle-star {
+      top: 100px;
+      left: 3%;
+      transform: rotate(-12deg);
+    }
+
+    .doodle-flower {
+      top: 280px;
+      right: 2%;
+      width: 90px;
+      transform: rotate(10deg);
+    }
+
+    .doodle-squiggle {
+      top: 670px;
+      left: 1%;
+      width: 85px;
+    }
+
+    .doodle-cloud {
+      top: 1190px;
+      right: 3%;
+      width: 100px;
+    }
+
+    .doodle-spark {
+      top: 1500px;
+      left: 4%;
+      width: 55px;
+    }
+
+    /* Intro */
+
+    .kontak-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 20px;
+      padding: 9px 15px;
+      border: 1.5px dashed #cf8b2b;
+      border-radius: 30px;
+      background: rgba(255,255,255,.72);
+      color: #88591e;
+      font-size: .79rem;
+      font-weight: 900;
+      letter-spacing: .07em;
+      text-transform: uppercase;
+      transform: rotate(-2deg);
+    }
+
+    .kontak-title {
+      max-width: 780px;
+      margin: 0;
+      color: #3c382a;
+      font-size: clamp(2.65rem, 6.2vw, 5rem);
+      font-weight: 900;
+      line-height: 1;
+      letter-spacing: -.045em;
+    }
+
+    .kontak-title .hijau {
+      position: relative;
+      display: inline-block;
+      color: var(--hijau);
+    }
+
+    .kontak-title .hijau::after {
+      position: absolute;
+      z-index: -1;
+      right: 0;
+      bottom: -5px;
+      left: 0;
+      height: 9px;
+      border-radius: 50%;
+      background: var(--kuning);
+      content: "";
+      transform: rotate(-2deg);
+    }
+
+    .kontak-intro {
+      max-width: 600px;
+      margin: 23px 0 0;
+      color: #786148;
+      font-size: 1rem;
+      line-height: 1.9;
+    }
+
+    /* Kontak dan HP */
+
+    .kontak-hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.08fr) minmax(280px, .92fr);
+      align-items: center;
+      gap: 45px;
+      margin-top: 42px;
+    }
+
+    .kontak-list {
+      display: grid;
+      gap: 16px;
+    }
+
+    .kontak-card {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      min-width: 0;
+      padding: 17px;
+      border: 2px solid rgba(112,77,39,.12);
+      border-radius: 21px;
+      background: rgba(255,255,255,.85);
+      box-shadow: 5px 6px 0 rgba(111,72,28,.08);
+      color: inherit;
+      text-decoration: none;
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+
+    .kontak-card:nth-child(2) {
+      background: rgba(255,249,227,.94);
+      transform: rotate(.6deg);
+    }
+
+    .kontak-card:nth-child(3) {
+      background: rgba(239,249,232,.96);
+      transform: rotate(-.6deg);
+    }
+
+    .kontak-card:hover {
+      transform: translateY(-4px) rotate(0);
+      box-shadow: 7px 9px 0 rgba(111,72,28,.12);
+    }
+
+    .kontak-icon {
+      display: grid;
+      flex: 0 0 55px;
+      width: 55px;
+      height: 55px;
+      place-items: center;
+      border-radius: 17px;
+      background: #ffe09a;
+      color: #714919;
+      font-size: 1.65rem;
+    }
+
+    .kontak-card:nth-child(2) .kontak-icon {
+      background: #dce8ff;
+      color: var(--biru);
+    }
+
+    .kontak-card:nth-child(3) .kontak-icon {
+      background: #d4eed7;
+      color: var(--hijau);
+    }
+
+    .kontak-card-copy {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .kontak-card-copy strong {
+      display: block;
+      margin-bottom: 5px;
+      color: #483621;
+      font-family: var(--font-tebal, "DM Sans"), sans-serif;
+      font-size: 1rem;
+      font-weight: 900;
+    }
+
+    .kontak-card-copy span {
+      display: block;
+      color: #7b6349;
+      font-size: .87rem;
+      line-height: 1.65;
+    }
+
+    .kontak-arrow {
+      flex-shrink: 0;
+      color: #b77b25;
+      font-size: 1.25rem;
+      font-weight: 900;
+    }
+
+    .kontak-note {
+      padding: 14px 16px;
+      border-left: 4px solid var(--hijau);
+      border-radius: 0 13px 13px 0;
+      background: rgba(255,255,255,.55);
+      color: #765e43;
+      font-size: .89rem;
+      line-height: 1.8;
+    }
+
+    /* HP dekoratif di kanan */
+
+    .phone-stage {
+      position: relative;
+      display: grid;
+      min-height: 500px;
+      place-items: center;
+    }
+
+    .phone-halo {
+      position: absolute;
+      width: 330px;
+      height: 340px;
+      border: 2px dashed rgba(194,126,33,.45);
+      border-radius: 48% 52% 61% 39% / 41% 44% 56% 59%;
+      background: radial-gradient(circle, rgba(255,255,255,.85), rgba(255,207,126,.27) 65%, transparent 70%);
+      animation: halo-gerak 10s ease-in-out infinite alternate;
+    }
+
+    .phone-star {
+      position: absolute;
+      color: #d58a20;
+      font-size: 2.1rem;
+      animation: star-gerak 3s ease-in-out infinite;
+    }
+
+    .phone-star.one {
+      top: 48px;
+      right: 25px;
+    }
+
+    .phone-star.two {
+      bottom: 80px;
+      left: 20px;
+      color: var(--hijau);
+      animation-delay: .7s;
+    }
+
+    .phone {
+      position: relative;
+      width: min(250px, 78vw);
+      padding: 9px;
+      border: 4px solid #5b4c3b;
+      border-radius: 38px;
+      background: linear-gradient(145deg, #fffdf7, #d8c7ab);
+      box-shadow:
+        11px 14px 0 rgba(116,76,36,.15),
+        inset 0 0 0 2px white,
+        0 25px 55px rgba(112,70,23,.2);
+      transform: rotate(5deg);
+      animation: phone-melayang 5s ease-in-out infinite;
+    }
+
+    .phone-side-button {
+      position: absolute;
+      top: 94px;
+      left: -9px;
+      width: 5px;
+      height: 52px;
+      border-radius: 5px 0 0 5px;
+      background: #8b7962;
+    }
+
+    .phone-screen {
+      overflow: hidden;
+      border: 2px solid #e5d7c1;
+      border-radius: 29px;
+      background: #fffaf0;
+    }
+
+    .phone-notch {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 26px;
+    }
+
+    .phone-notch::before {
+      width: 65px;
+      height: 8px;
+      border-radius: 10px;
+      background: #55483b;
+      content: "";
+    }
+
+    .phone-wallpaper {
+      display: flex;
+      min-height: 380px;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 24px 15px;
+      background:
+        radial-gradient(circle at 10% 10%, white, transparent 25%),
+        linear-gradient(155deg, #ffe9b5, #fff8e9 52%, #d8efd7);
+      text-align: center;
+    }
+
+    .phone-logo {
+      display: grid;
+      width: 75px;
+      height: 75px;
+      place-items: center;
+      margin-bottom: 17px;
+      border: 3px solid white;
+      border-radius: 24px;
+      background: var(--hijau);
+      box-shadow: 0 6px 0 rgba(8,127,91,.15);
+      font-size: 2.2rem;
+      transform: rotate(-5deg);
+    }
+
+    .phone-wallpaper h3 {
+      margin: 0;
+      color: #3b4a32;
+      font-size: 1.2rem;
+      font-weight: 900;
+      line-height: 1.3;
+    }
+
+    .phone-wallpaper p {
+      margin: 10px 0 22px;
+      color: #77664b;
+      font-size: .78rem;
+      line-height: 1.7;
+    }
+
+    .phone-dots {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+
+    .phone-dots span {
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+      background: var(--kuning);
+    }
+
+    .phone-dots span:nth-child(2) {
+      background: var(--hijau);
+    }
+
+    .phone-dots span:nth-child(3) {
+      background: var(--biru);
+    }
+
+    .phone-button {
+      display: inline-block;
+      padding: 10px 15px;
+      border-radius: 25px;
+      background: var(--hijau);
+      box-shadow: 0 4px 0 #055a40;
+      color: white !important;
+      font-size: .76rem;
+      font-weight: 900;
+      text-decoration: none;
+    }
+
+    .phone-caption {
+      position: absolute;
+      right: -3px;
+      bottom: 28px;
+      padding: 10px 14px;
+      border: 2px dashed #d38a25;
+      background: #fff8e8;
+      color: #76501e;
+      font-size: .78rem;
+      font-weight: 900;
+      transform: rotate(-5deg);
+    }
+
+    /* Pembatas */
+
+    .section-divider {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin: 70px 0 45px;
+      color: #8e632b;
+      font-size: .8rem;
+      font-weight: 900;
+      letter-spacing: .1em;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    .section-divider::before,
+    .section-divider::after {
+      flex: 1;
+      height: 2px;
+      background: repeating-linear-gradient(90deg, #d8a04b 0 8px, transparent 8px 14px);
+      content: "";
+    }
+
+    /* Bagian peta */
+
+    .map-section {
+      position: relative;
+      padding: 30px;
+      border: 2px dashed rgba(133,86,34,.3);
+      border-radius: 27px;
+      background: rgba(255,250,237,.79);
+      box-shadow: 8px 10px 0 rgba(120,78,34,.08);
+    }
+
+    .map-heading {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 18px;
+      margin-bottom: 25px;
+    }
+
+    .map-heading h2 {
+      margin: 0 0 10px;
+      color: #423625;
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 900;
+      line-height: 1.1;
+    }
+
+    .map-heading p {
+      max-width: 570px;
+      margin: 0;
+      color: #7a6349;
+      font-size: .94rem;
+      line-height: 1.8;
+    }
+
+    .map-stamp {
+      display: grid;
+      flex-shrink: 0;
+      width: 65px;
+      height: 65px;
+      place-items: center;
+      border: 2px dashed #bf7c25;
+      border-radius: 50%;
+      background: #ffe5a9;
+      color: #87531b;
+      font-size: 1.7rem;
+      transform: rotate(10deg);
+    }
+
+    /* KERTAS TREASURE MAP:
+       Google Maps benar-benar berada di dalam bentuk kertas.
+       Tepi tidak menggunakan border-radius kotak. */
+
+    .treasure-paper {
+      position: relative;
+      isolation: isolate;
+      margin: 32px 12px 38px;
+      padding: clamp(23px, 4vw, 40px);
+      background:
+        radial-gradient(ellipse at 12% 15%, rgba(255,245,207,.9), transparent 35%),
+        radial-gradient(ellipse at 85% 80%, rgba(169,115,54,.16), transparent 36%),
+        repeating-linear-gradient(3deg, #e8cb94 0px, #e8cb94 4px, #e5c58b 5px, #e5c58b 7px);
+      clip-path: polygon(
+        3% 4%, 9% 2%, 15% 5%, 22% 1%, 29% 4%,
+        36% 1%, 43% 5%, 50% 2%, 58% 5%, 65% 1%,
+        72% 4%, 80% 2%, 87% 5%, 97% 2%,
+        95% 12%, 98% 20%, 95% 29%, 98% 37%,
+        94% 46%, 98% 55%, 95% 64%, 98% 74%,
+        94% 83%, 97% 94%, 87% 96%, 78% 93%,
+        69% 98%, 60% 94%, 51% 98%, 42% 94%,
+        32% 98%, 23% 94%, 14% 97%, 3% 94%,
+        5% 84%, 2% 75%, 5% 66%, 2% 57%,
+        5% 47%, 2% 38%, 5% 28%, 2% 18%
+      );
+      filter: drop-shadow(0 9px 5px rgba(101,64,28,.22));
+      transform: rotate(-.4deg);
+    }
+
+    .treasure-paper::before {
+      position: absolute;
+      inset: 13px;
+      z-index: 2;
+      border: 2px dashed rgba(126,78,35,.48);
+      content: "";
+      pointer-events: none;
+    }
+
+    .treasure-label {
+      position: absolute;
+      top: 30px;
+      left: 34px;
+      z-index: 4;
+      padding: 7px 12px;
+      border: 1px dashed #8c5d2d;
+      background: rgba(255,239,194,.94);
+      color: #70451e;
+      font-size: .68rem;
+      font-weight: 900;
+      letter-spacing: .12em;
+      transform: rotate(-4deg);
+      pointer-events: none;
+    }
+
+    /* Maps berada di dalam kertas, bukan di atas kertas terpisah */
+    .treasure-map-window {
+      position: relative;
+      z-index: 1;
+      overflow: hidden;
+      width: 100%;
+      height: clamp(300px, 45vw, 450px);
+      background: #d9e6cf;
+      clip-path: polygon(
+        2% 3%, 12% 1%, 21% 3%, 32% 1%, 42% 3%,
+        52% 1%, 63% 3%, 73% 1%, 84% 3%, 98% 1%,
+        97% 15%, 99% 27%, 96% 40%, 99% 52%,
+        96% 65%, 98% 78%, 95% 97%, 83% 95%,
+        72% 98%, 60% 95%, 49% 98%, 37% 95%,
+        25% 98%, 13% 95%, 2% 98%, 4% 84%,
+        1% 70%, 4% 57%, 1% 43%, 4% 29%, 1% 15%
+      );
+    }
+
+    .treasure-map-window iframe {
+      display: block;
+      width: 100%;
+      height: 100%;
+      border: 0;
+      filter: sepia(.14) saturate(.9);
+    }
+
+    /* Doodle dekoratif di atas area map */
+    .map-doodle {
+      position: absolute;
+      z-index: 3;
+      pointer-events: none;
+      color: #8c5d2d;
+      text-shadow: 0 1px rgba(255,240,198,.7);
+    }
+
+    .map-doodle-star {
+      top: 27%;
+      right: 9%;
+      font-size: 2rem;
+    }
+
+    .map-doodle-skull {
+      right: 9%;
+      bottom: 18%;
+      font-size: 1.8rem;
+      transform: rotate(9deg);
+    }
+
+    .map-compass {
+      position: absolute;
+      right: 9%;
+      bottom: 18%;
+      z-index: 4;
+      display: grid;
+      width: 57px;
+      height: 57px;
+      place-items: center;
+      border: 3px double #92612d;
+      border-radius: 50%;
+      background: rgba(255,242,202,.94);
+      box-shadow: 0 3px 8px rgba(60,40,20,.16);
+      color: #87521e;
+      font-size: 1.6rem;
+      pointer-events: none;
+    }
+
+    .map-legend {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 10px;
+      margin: 3px 10px 0;
+      color: #70451e;
+      font-size: .79rem;
+      font-weight: 900;
+    }
+
+    /* Botol kaca berisi pesan */
+
+    .message-bottle {
+      display: flex;
+      align-items: center;
+      gap: 23px;
+      margin-top: 35px;
+      padding: 22px;
+      border: 2px dashed #c9954e;
+      border-radius: 23px;
+      background: linear-gradient(125deg, #fff2cf, #fffaf0 70%);
+      box-shadow: 5px 7px 0 rgba(121,78,34,.08);
+    }
+
+    .bottle-art {
+      display: grid;
+      flex: 0 0 115px;
+      min-height: 155px;
+      place-items: center;
+      border-radius: 25px;
+      background: radial-gradient(ellipse, rgba(149,210,186,.3), transparent 70%);
+      transform: rotate(-5deg);
+      transition: transform .25s ease;
+    }
+
+    .message-bottle:hover .bottle-art {
+      transform: rotate(4deg) translateY(-4px);
+    }
+
+    .bottle-art svg {
+      display: block;
+      width: 105px;
+      height: 155px;
+      overflow: visible;
+      filter: drop-shadow(3px 6px 3px rgba(94,73,42,.15));
+    }
+
+    .bottle-label {
+      display: inline-block;
+      margin-bottom: 8px;
+      color: #a16c2b;
+      font-size: .71rem;
+      font-weight: 900;
+      letter-spacing: .12em;
+    }
+
+    .bottle-copy h3 {
+      margin: 0 0 9px;
+      color: #4b4a2d;
+      font-size: 1.4rem;
+      font-weight: 900;
+    }
+
+    .bottle-copy p {
+      margin: 0 0 17px;
+      color: #796349;
+      font-size: .92rem;
+      line-height: 1.85;
+    }
+
+    .map-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px 17px;
+      border: 2px solid #075d43;
+      border-radius: 13px;
+      background: var(--hijau);
+      color: white !important;
+      font-size: .86rem;
+      font-weight: 900;
+      text-decoration: none;
+      transition: transform .2s ease, background .2s ease;
+    }
+
+    .map-button:hover {
+      background: #066747;
+      transform: translateY(-3px);
+    }
+
+    /* Alamat */
+
+    .map-address {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      margin-top: 27px;
+      padding-top: 23px;
+      border-top: 1px dashed #c9a16b;
+    }
+
+    .address-copy {
+      display: flex;
+      align-items: flex-start;
+      gap: 13px;
+    }
+
+    .address-icon {
+      display: grid;
+      flex-shrink: 0;
+      width: 45px;
+      height: 45px;
+      place-items: center;
+      border-radius: 15px;
+      background: #dcefd9;
+      color: var(--hijau);
+      font-size: 1.4rem;
+    }
+
+    .address-copy strong {
+      display: block;
+      margin-bottom: 5px;
+      color: #473825;
+    }
+
+    .address-copy p {
+      margin: 0;
+      color: #7a6349;
+      font-size: .9rem;
+      line-height: 1.8;
+    }
+
+    /* Pesan penutup */
+
+    .contact-ending {
+      margin-top: 55px;
+      padding: 28px;
+      border: 2px dashed #d5a14f;
+      border-radius: 23px;
+      background: rgba(255,255,255,.62);
+      text-align: center;
+      transform: rotate(-.4deg);
+    }
+
+    .contact-ending .stars {
+      color: #d78d1e;
+      font-size: 1.6rem;
+    }
+
+    .contact-ending h2 {
+      margin: 9px 0;
+      color: #3c4d33;
+      font-size: clamp(1.4rem, 3vw, 2rem);
+      font-weight: 900;
+    }
+
+    .contact-ending p {
+      max-width: 590px;
+      margin: auto;
+      color: #796349;
+      font-size: .94rem;
+      line-height: 1.85;
+    }
+
+    .back-top {
+      position: fixed;
+      right: 22px;
+      bottom: 22px;
+      z-index: 50;
+      display: grid;
+      width: 45px;
+      height: 45px;
+      place-items: center;
+      border: 2px solid rgba(255,255,255,.8);
+      border-radius: 14px;
+      background: var(--hijau);
+      box-shadow: 0 4px 0 rgba(5,81,57,.25);
+      color: #fff;
+      font-size: 1.3rem;
+      cursor: pointer;
+    }
+
+    @keyframes phone-melayang {
+      0%, 100% { translate: 0 0; }
+      50% { translate: 0 -8px; }
+    }
+
+    @keyframes star-gerak {
+      0%, 100% { translate: 0 0; }
+      50% { translate: 0 -7px; }
+    }
+
+    @keyframes halo-gerak {
+      from { rotate: -5deg; scale: 1; }
+      to { rotate: 5deg; scale: 1.05; }
+    }
+
+    @media (max-width: 850px) {
+      .kontak-wrap {
+        width: min(100% - 34px, 680px);
+        padding-top: 45px;
+      }
+
+      .kontak-hero {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 20px;
+      }
+
+      .phone-stage {
+        min-height: 470px;
+        grid-row: 1;
+      }
+
+      .kontak-list {
+        grid-row: 2;
+      }
+
+      .map-section {
+        padding: 22px;
+      }
+    }
+
+    @media (max-width: 540px) {
+      .kontak-wrap {
+        width: calc(100% - 26px);
+        padding: 36px 0 50px;
+      }
+
+      .kontak-title {
+        font-size: clamp(2.55rem, 12vw, 3.7rem);
+      }
+
+      .kontak-intro {
+        font-size: .93rem;
+      }
+
+      .phone-stage {
+        min-height: 440px;
+      }
+
+      .phone {
+        width: 225px;
+      }
+
+      .phone-wallpaper {
+        min-height: 345px;
+      }
+
+      .phone-halo {
+        width: 280px;
+        height: 290px;
+      }
+
+      .phone-caption {
+        right: 0;
+        bottom: 22px;
+        font-size: .7rem;
+      }
+
+      .kontak-card {
+        gap: 11px;
+        padding: 13px 11px;
+        border-radius: 17px;
+      }
+
+      .kontak-icon {
+        flex-basis: 46px;
+        width: 46px;
+        height: 46px;
+        border-radius: 14px;
+        font-size: 1.4rem;
+      }
+
+      .kontak-card-copy strong {
+        font-size: .9rem;
+      }
+
+      .kontak-card-copy span {
+        font-size: .78rem;
+      }
+
+      .section-divider {
+        margin: 45px 0 28px;
+        font-size: .66rem;
+        letter-spacing: .05em;
+      }
+
+      .map-section {
+        padding: 14px;
+        border-radius: 20px;
+      }
+
+      .map-heading {
+        gap: 10px;
+      }
+
+      .map-heading h2 {
+        font-size: 1.65rem;
+      }
+
+      .map-heading p {
+        font-size: .84rem;
+      }
+
+      .map-stamp {
+        width: 48px;
+        height: 48px;
+        font-size: 1.2rem;
+      }
+
+      .treasure-paper {
+        margin: 26px 3px 30px;
+        padding: 24px 13px;
+      }
+
+      .treasure-paper::before {
+        inset: 10px;
+        border-width: 1px;
+      }
+
+      .treasure-label {
+        top: 19px;
+        left: 20px;
+        padding: 5px 7px;
+        font-size: .52rem;
+      }
+
+      .treasure-map-window {
+        height: 300px;
+      }
+
+      .map-doodle-star {
+        font-size: 1.3rem;
+      }
+
+      .map-compass {
+        right: 8%;
+        bottom: 14%;
+        width: 42px;
+        height: 42px;
+        font-size: 1.2rem;
+      }
+
+      .map-doodle-skull {
+        right: 8%;
+        bottom: 14%;
+        font-size: 1.3rem;
+      }
+
+      .map-legend {
+        flex-direction: column;
+        font-size: .71rem;
+      }
+
+      .message-bottle {
+        flex-direction: column;
+        gap: 7px;
+        padding: 17px;
+        text-align: center;
+      }
+
+      .bottle-art {
+        flex-basis: auto;
+        min-height: 135px;
+      }
+
+      .bottle-art svg {
+        height: 135px;
+      }
+
+      .bottle-copy h3 {
+        font-size: 1.23rem;
+      }
+
+      .bottle-copy p,
+      .address-copy p {
+        font-size: .83rem;
+      }
+
+      .map-address {
+        align-items: stretch;
+      }
+
+      .map-address .map-button {
+        width: 100%;
+      }
+
+      .contact-ending {
+        margin-top: 38px;
+        padding: 21px 14px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .phone,
+      .phone-halo,
+      .phone-star {
+        animation: none;
+      }
+
+      html {
+        scroll-behavior: auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER WEBSITE -->
+  <div class="pita-atas">
+    <div class="pita-pesan">
+      <span>✦</span> Bersama Al-Qur'an, Menuju Generasi Unggul!
+    </div>
+    <div class="sosial-mini">
+      <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer">◎ Instagram</a>
+      <a href="https://facebook.com/" target="_blank" rel="noopener noreferrer">f Facebook</a>
+      <a href="https://youtube.com/" target="_blank" rel="noopener noreferrer">▶ YouTube</a>
+      <a href="https://tiktok.com/" target="_blank" rel="noopener noreferrer">♪ TikTok</a>
+    </div>
+  </div>
+
+  <header class="header-utama">
+    <a class="identitas" href="beranda.html" aria-label="SMPIT Nur Hidayah, beranda">
+      <div class="logo-sekolah">
+        <svg viewBox="0 0 70 80" role="img" aria-label="Logo sementara">
+          <path d="M35 5 L54 17 L54 40 Q52 59 35 71 Q18 59 16 40 L16 17Z" fill="#087f5b"/>
+          <path d="M35 13 L45 22 L45 40 Q43 52 35 59 Q27 52 25 40 L25 22Z" fill="#f5bd26"/>
+          <path d="M35 23 L38 33 L48 33 L40 39 L43 49 L35 43 L27 49 L30 39 L22 33 L32 33Z" fill="#fff9e9"/>
+          <path d="M9 33 Q17 17 24 18 M61 33 Q53 17 46 18" stroke="#159b65" stroke-width="3" fill="none" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div>
+        <div class="nama-sekolah">SMPIT<br>Nur Hidayah</div>
+        <div class="slogan-logo">Islami · Cerdas · Berprestasi</div>
+      </div>
+    </a>
+
+    <button class="tombol-menu" type="button" aria-label="Buka menu"
+      aria-expanded="false" aria-controls="menu-navigasi">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="menu-navigasi" id="menu-navigasi" aria-label="Navigasi utama">
+      <a href="beranda.html">Beranda</a>
+      <a href="beranda.html#tentang">Detail</a>
+      <div class="nav-dropdown">
+        <a class="nav-dropdown-toggle aktif" href="#kontak-hero" aria-haspopup="true">
+          Tentang Kami <span class="nav-chevron" aria-hidden="true">⌄</span>
+        </a>
+        <div class="nav-dropdown-menu">
+          <a href="profil.html">Profil</a>
+          <a href="sambutan.html">Sambutan Kepala Sekolah</a>
+          <a href="fasilitas.html">Fasilitas</a>
+          <a href="kegiatan.html">Kegiatan</a>
+          <a href="prestasi.html">Prestasi</a>
+          <a class="aktif" href="kontak.html" aria-current="page">Kontak</a>
+        </div>
+      </div>
+    </nav>
+
+    <a class="tombol-ppdb" href="beranda.html#daftar">
+      PPDB 2026/2027 <span>→</span>
+    </a>
+  </header>
+
+  <main class="kontak-page">
+
+    <!-- DOODLE SVG -->
+    <div class="doodle doodle-star" aria-hidden="true">
+      <svg viewBox="0 0 100 100" fill="none">
+        <path d="M50 5 L60 37 L93 39 L67 59 L75 91 L50 72 L24 91 L33 59 L7 39 L40 37Z"
+          stroke="#d28a22" stroke-width="4" stroke-linejoin="round"/>
+      </svg>
+    </div>
+
+    <div class="doodle doodle-flower" aria-hidden="true">
+      <svg viewBox="0 0 100 100">
+        <g fill="#f8c95d" stroke="#d98b24" stroke-width="2">
+          <ellipse cx="50" cy="25" rx="13" ry="22"/>
+          <ellipse cx="50" cy="75" rx="13" ry="22"/>
+          <ellipse cx="25" cy="50" rx="22" ry="13"/>
+          <ellipse cx="75" cy="50" rx="22" ry="13"/>
+        </g>
+        <circle cx="50" cy="50" r="13" fill="#087f5b"/>
+      </svg>
+    </div>
+
+    <div class="doodle doodle-squiggle" aria-hidden="true">
+      <svg viewBox="0 0 100 100" fill="none">
+        <path d="M10 60 C25 5 76 5 80 40 S40 75 50 42 S93 30 90 70"
+          stroke="#087f5b" stroke-width="4" stroke-linecap="round"/>
+        <path d="M18 80 Q40 67 58 84" stroke="#f59e0b" stroke-width="4" stroke-linecap="round"/>
+      </svg>
+    </div>
+
+    <div class="doodle doodle-cloud" aria-hidden="true">
+      <svg viewBox="0 0 120 90" fill="none">
+        <path d="M23 62 C3 62 5 37 25 36 C28 9 62 8 70 30 C91 17 111 35 103 52 C126 68 103 80 84 77 L26 77 C8 77 7 63 23 62Z"
+          stroke="#d28a22" stroke-width="4" stroke-linecap="round"/>
+      </svg>
+    </div>
+
+    <div class="doodle doodle-spark" aria-hidden="true">
+      <svg viewBox="0 0 100 100">
+        <path d="M50 5 L60 38 L95 50 L60 61 L50 95 L39 61 L5 50 L39 38Z" fill="#1d4ed8" opacity=".75"/>
+      </svg>
+    </div>
+
+    <div class="kontak-wrap">
+
+      <!-- HERO -->
+      <section id="kontak-hero" aria-labelledby="kontak-title">
+        <div class="kontak-eyebrow">✦ Mari terhubung</div>
+
+        <h1 class="kontak-title" id="kontak-title">
+          Yuk, Sapa<br>
+          <span class="hijau">Nur Hidayah!</span>
+        </h1>
+
+        <p class="kontak-intro">
+          Ada pertanyaan tentang sekolah, program pendidikan, atau pendaftaran?
+          Kami senang bisa terhubung dengan kamu dan keluarga.
+          Pilih cara menghubungi kami di bawah ini!
+        </p>
+
+        <div class="kontak-hero">
+
+          <!-- PILIHAN KONTAK -->
+          <div class="kontak-list">
+
+            <a class="kontak-card" href="tel:+6285113176518">
+              <div class="kontak-icon" aria-hidden="true">☎</div>
+              <div class="kontak-card-copy">
+                <strong>Telepon Sekolah</strong>
+                <span>0851-1317-6518</span>
+                <span>Ketuk untuk menghubungi</span>
+              </div>
+              <span class="kontak-arrow" aria-hidden="true">↗</span>
+            </a>
+
+            <a class="kontak-card" href="mailto:info@smpitnurhidayah.sch.id">
+              <div class="kontak-icon" aria-hidden="true">✉</div>
+              <div class="kontak-card-copy">
+                <strong>Email Resmi</strong>
+                <span>info@smpitnurhidayah.sch.id</span>
+                <span>Kirim pertanyaan melalui email</span>
+              </div>
+              <span class="kontak-arrow" aria-hidden="true">↗</span>
+            </a>
+
+            <a class="kontak-card"
+              href="https://www.instagram.com/akun_resmi_sekolah/"
+              target="_blank" rel="noopener noreferrer">
+              <div class="kontak-icon" aria-hidden="true">◎</div>
+              <div class="kontak-card-copy">
+                <strong>Instagram Sekolah</strong>
+                <span>@akun_resmi_sekolah</span>
+                <span>Jelajahi kabar dan aktivitas sekolah</span>
+              </div>
+              <span class="kontak-arrow" aria-hidden="true">↗</span>
+            </a>
+
+            <div class="kontak-note">
+              <strong>✦ Catatan kecil</strong><br>
+              Jam operasional sekolah perlu dikonfirmasi langsung kepada pihak sekolah.
+            </div>
+          </div>
+
+          <!-- SATU HP DEKORATIF -->
+          <div class="phone-stage" aria-label="Ilustrasi ponsel sekolah">
+            <div class="phone-halo" aria-hidden="true"></div>
+            <span class="phone-star one" aria-hidden="true">✦</span>
+            <span class="phone-star two" aria-hidden="true">✳</span>
+
+            <div class="phone">
+              <div class="phone-side-button" aria-hidden="true"></div>
+              <div class="phone-screen">
+                <div class="phone-notch" aria-hidden="true"></div>
+                <div class="phone-wallpaper">
+                  <div class="phone-logo" aria-hidden="true">
+                    <svg viewBox="0 0 70 80" width="52" height="58">
+                      <path d="M35 5 L54 17 L54 40 Q52 59 35 71 Q18 59 16 40 L16 17Z" fill="#fff8e8"/>
+                      <path d="M35 13 L45 22 L45 40 Q43 52 35 59 Q27 52 25 40 L25 22Z" fill="#f5bd26"/>
+                      <path d="M35 23 L38 33 L48 33 L40 39 L43 49 L35 43 L27 49 L30 39 L22 33 L32 33Z" fill="#087f5b"/>
+                    </svg>
+                  </div>
+
+                  <h3>SMPIT<br>Nur Hidayah</h3>
+                  <p>Islami · Cerdas · Berprestasi</p>
+
+                  <div class="phone-dots" aria-hidden="true">
+                    <span></span><span></span><span></span>
+                  </div>
+
+                  <a class="phone-button" href="#peta-sekolah">
+                    Temukan Lokasi ↗
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="phone-caption">Halo, Sahabat Nur Hidayah! ✿</div>
+          </div>
+        </div>
+      </section>
+
+      <div class="section-divider" aria-hidden="true">
+        Ikuti Jejak Menuju Sekolah
+      </div>
+
+      <!-- PETA: GOOGLE MAPS DI DALAM KERTAS TREASURE MAP -->
+      <section class="map-section" id="peta-sekolah" aria-labelledby="map-title">
+
+        <div class="map-heading">
+          <div>
+            <div class="kontak-eyebrow">🏴‍☠️ Misi pencarian lokasi</div>
+            <h2 id="map-title">Peta Harta Karun!</h2>
+            <p>
+              Ikuti petunjuk perjalanan dan temukan SMPIT Nur Hidayah.
+              Peta interaktif ada di dalam kertas harta karun ini!
+            </p>
+          </div>
+          <div class="map-stamp" aria-hidden="true">✦</div>
+        </div>
+
+        <!-- Bentuk luar berupa kertas sobek -->
+        <div class="treasure-paper">
+
+          <div class="treasure-label">TREASURE MAP • SRAGEN</div>
+
+          <!-- Google Maps asli berada DI DALAM bentuk kertas -->
+          <div class="treasure-map-window">
+            <iframe
+              title="Google Maps lokasi SMPIT Nur Hidayah"
+              src="https://maps.google.com/maps?q=SMPIT%20Nur%20Hidayah%20Sragen%20Jawa%20Tengah&t=&z=14&ie=UTF8&iwloc=&output=embed"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen>
+            </iframe>
+          </div>
+
+          <!-- Ornamen bajak laut mengambang di atas peta -->
+          <span class="map-doodle map-doodle-star" aria-hidden="true">✦</span>
+          <span class="map-doodle map-doodle-skull" aria-hidden="true">☠</span>
+
+          <div class="map-compass" aria-hidden="true">✥</div>
+        </div>
+
+        <div class="map-legend">
+          <span>✕ Mulai petualanganmu</span>
+          <span>⚑ Tujuan: SMPIT Nur Hidayah</span>
+        </div>
+
+        <!-- BOTOL KACA TETAP ADA -->
+        <div class="message-bottle">
+          <div class="bottle-art">
+            <svg viewBox="0 0 100 150" role="img" aria-label="Botol kaca berisi pesan">
+              <defs>
+                <linearGradient id="glassGradient" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#ffffff" stop-opacity=".9"/>
+                  <stop offset="45%" stop-color="#b9e8d8" stop-opacity=".58"/>
+                  <stop offset="100%" stop-color="#70b9a1" stop-opacity=".78"/>
+                </linearGradient>
+              </defs>
+
+              <rect x="39" y="8" width="22" height="29" rx="5"
+                fill="url(#glassGradient)" stroke="#5a9c86" stroke-width="2.5"/>
+              <rect x="36" y="5" width="28" height="10" rx="3"
+                fill="#a56c36" stroke="#79502c" stroke-width="2"/>
+
+              <path d="M39 31 Q39 42 28 49 Q14 59 14 78 V119 Q14 140 34 142 H66 Q86 140 86 119 V78 Q86 59 72 49 Q61 42 61 31Z"
+                fill="url(#glassGradient)" stroke="#5a9c86" stroke-width="3"/>
+
+              <path d="M25 73 Q24 62 34 55"
+                fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" opacity=".9"/>
+              <path d="M24 86 V116"
+                fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" opacity=".8"/>
+
+              <path d="M29 76 Q50 67 71 76 L67 111 Q50 119 33 111Z"
+                fill="#f8e4b5" stroke="#b98a4d" stroke-width="2"/>
+              <path d="M35 84 Q50 79 65 84 M35 93 Q50 88 64 93 M37 102 Q50 97 62 102"
+                fill="none" stroke="#bd9459" stroke-width="2" stroke-linecap="round"/>
+
+              <path d="M47 109 L40 124 L51 120 L60 127 L56 109"
+                fill="#d85b42" stroke="#a8402d" stroke-width="1.5"/>
+              <circle cx="51" cy="109" r="5" fill="#e66b4e"/>
+            </svg>
+          </div>
+
+          <div class="bottle-copy">
+            <span class="bottle-label">PESAN DALAM BOTOL</span>
+            <h3>Petualanganmu Menanti!</h3>
+            <p>
+              Setiap perjalanan hebat dimulai dari satu langkah.
+              Yuk, temukan sekolah kami dan mulai perjalananmu
+              bersama SMPIT Nur Hidayah!
+            </p>
+            <a class="map-button"
+              href="https://www.google.com/maps/search/?api=1&query=SMPIT+Nur+Hidayah+Sragen+Jawa+Tengah"
+              target="_blank" rel="noopener noreferrer">
+              Buka petunjuk lokasi ↗
+            </a>
+          </div>
+        </div>
+
+        <div class="map-address">
+          <div class="address-copy">
+            <div class="address-icon" aria-hidden="true">⌖</div>
+            <div>
+              <strong>Alamat sekolah</strong>
+              <p>
+                Asemrejo RT. 47/17, Kroyo,<br>
+                Karangmalang, Sragen,<br>
+                Jawa Tengah 57221
+              </p>
+            </div>
+          </div>
+
+          <a class="map-button"
+            href="https://www.google.com/maps/search/?api=1&query=SMPIT+Nur+Hidayah+Sragen+Jawa+Tengah"
+            target="_blank" rel="noopener noreferrer">
+            Buka Google Maps ↗
+          </a>
+        </div>
+      </section>
+
+      <!-- PENUTUP -->
+      <section class="contact-ending">
+        <div class="stars" aria-hidden="true">✳ ✦ ✳</div>
+        <h2>Senang Bisa Terhubung denganmu!</h2>
+        <p>
+          Terima kasih sudah mengenal SMPIT Nur Hidayah.
+          Semoga setiap langkah kita menjadi bagian dari perjalanan
+          menumbuhkan generasi yang berilmu, berakhlak, dan berprestasi.
+        </p>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" id="footer-kontak">
+    <div class="footer-utama">
+
+      <a class="identitas identitas-footer" href="beranda.html"
+        aria-label="SMPIT Nur Hidayah, beranda">
+        <div class="logo-sekolah logo-footer">
+          <svg viewBox="0 0 70 80" aria-hidden="true">
+            <path d="M35 5 L54 17 L54 40 Q52 59 35 71 Q18 59 16 40 L16 17Z" fill="#fff8e8"/>
+            <path d="M35 13 L45 22 L45 40 Q43 52 35 59 Q27 52 25 40 L25 22Z" fill="#f5bd26"/>
+            <path d="M35 23 L38 33 L48 33 L40 39 L43 49 L35 43 L27 49 L30 39 L22 33 L32 33Z" fill="#087f5b"/>
+          </svg>
+        </div>
+        <div>
+          <div class="nama-sekolah">SMPIT Nur Hidayah</div>
+          <div class="slogan-logo">Islami · Cerdas · Berprestasi</div>
+        </div>
+      </a>
+
+      <div class="footer-info">
+        <div>
+          <span>⌖</span>
+          <p>
+            Asemrejo RT. 47/17, Kroyo,<br>
+            Karangmalang, Sragen,<br>
+            Jawa Tengah 57221
+          </p>
+        </div>
+        <div>
+          <span>☎</span>
+          <p><a href="tel:+6285113176518">0851-1317-6518</a></p>
+        </div>
+        <div>
+          <span>✉</span>
+          <p><a href="mailto:info@smpitnurhidayah.sch.id">info@smpitnurhidayah.sch.id</a></p>
+        </div>
+      </div>
+
+      <div class="footer-sosial">
+        <a href="https://facebook.com/" target="_blank"
+          rel="noopener noreferrer" aria-label="Facebook">f</a>
+        <a href="https://instagram.com/" target="_blank"
+          rel="noopener noreferrer" aria-label="Instagram">◎</a>
+        <a href="https://youtube.com/" target="_blank"
+          rel="noopener noreferrer" aria-label="YouTube">▶</a>
+      </div>
+    </div>
+
+    <div class="footer-bawah">
+      <span>© <span data-tahun>2026</span> SMPIT Nur Hidayah. All rights reserved.</span>
+      <span class="footer-motto">Berilmu · Berakhlak · Berprestasi <i></i></span>
+    </div>
+  </footer>
+
+  <button class="back-top" type="button" aria-label="Kembali ke atas">↑</button>
+
+  <script>
+    // Tahun otomatis
+    document.querySelectorAll("[data-tahun]").forEach((el) => {
+      el.textContent = new Date().getFullYear();
+    });
+
+    // Menu responsif
+    const tombolMenu = document.querySelector(".tombol-menu");
+    const menuNavigasi = document.querySelector("#menu-navigasi");
+
+    if (tombolMenu && menuNavigasi) {
+      tombolMenu.addEventListener("click", () => {
+        const terbuka = tombolMenu.getAttribute("aria-expanded") === "true";
+
+        tombolMenu.setAttribute("aria-expanded", String(!terbuka));
+        menuNavigasi.classList.toggle("menu-terbuka", !terbuka);
+      });
+    }
+
+    // Kembali ke atas
+    const tombolAtas = document.querySelector(".back-top");
+
+    if (tombolAtas) {
+      tombolAtas.addEventListener("click", () => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth"
+        });
+      });
+    }
+  </script>
+
+</body>
+</html>
